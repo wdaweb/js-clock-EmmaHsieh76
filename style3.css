@@ -1,177 +1,178 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	display: flex;
-	/* 水平置中 */
-	justify-content: center;
-	/* 垂直置中 */
-	align-items: center;
-	min-height: 100vh;
-	overflow: hidden;
-	background: #000000;
-	font-family: 'Anton';
+  display: flex;
+  /* 水平置中 */
+  justify-content: center;
+  /* 垂直置中 */
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: url(./background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Anton';
 }
 
 #time {
-	position: relative;
-	width: 500px;
-	height: 500px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* background: #000; */
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #000; */
 }
 .time-bx {
-	position: relative;
-	width: 180px;
-	height: 180px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	left: 10px;
-	letter-spacing: 0.2em;
-	/* left: 10px; */
-	color: rgb(255, 55, 0);
-	-webkit-text-stroke: 1px white;
-	background-image: url(./sun.gif);
-	background-size: contain;
-	background-position: center center;
-	border-radius: 50%;
-	background-repeat: no-repeat;
-	/* box-shadow: 0 0 100px 100px rgb(250, 54, 0); */
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  left: 10px;
+  letter-spacing: 0.2em;
+  /* left: 10px; */
+  color: rgb(255, 55, 0);
+  -webkit-text-stroke: 1px white;
+  background-image: url(./sun.gif);
+  background-size: contain;
+  background-position: center center;
+  border-radius: 50%;
+  background-repeat: no-repeat;
 }
 
 #time .circle {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	/* background: palegreen; */
+  /* background: palegreen; */
 }
 
 #time .circle svg {
-	position: relative;
-	transform: rotate(270deg);
+  position: relative;
+  transform: rotate(270deg);
 }
 
 #time .circle:nth-child(1) svg {
-	width: 600px;
-	height: 600px;
-	/* background: rgb(255, 255, 255); */
+  width: 600px;
+  height: 600px;
+  /* background: rgb(255, 255, 255); */
 }
 #time .circle:nth-child(2) svg {
-	width: 420px;
-	height: 420px;
+  width: 420px;
+  height: 420px;
 }
 #time .circle:nth-child(3) svg {
-	width: 250px;
-	height: 250px;
+  width: 250px;
+  height: 250px;
 }
 
 #time .circle svg circle {
-	width: 100%;
-	height: 100%;
-	fill: transparent;
-	stroke: white;
-	stroke-width: 1;
-	transform: translate(10px, 10px);
-	opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white;
+  stroke-width: 2;
+  transform: translate(10px, 10px);
+  opacity: 0.5;
 }
 
 #time .circle:nth-child(1) svg circle {
-	/* 虛線 */
-	stroke-dasharray: 1830;
-	/* 虛線偏移量 */
-	/* stroke-dashoffset: 1820; */
+  /* 虛線 */
+  stroke-dasharray: 1830;
+  /* 虛線偏移量 */
+  /* stroke-dashoffset: 1820; */
 }
 #time .circle:nth-child(2) svg circle {
-	/* 虛線 */
-	stroke-dasharray: 1260;
-	/* 虛線偏移量 */
-	/* stroke-dashoffset: 1260; */
+  /* 虛線 */
+  stroke-dasharray: 1260;
+  /* 虛線偏移量 */
+  /* stroke-dashoffset: 1260; */
 }
 
 #time .circle:nth-child(3) svg circle {
-	/* 虛線 */
-	stroke-dasharray: 760;
-	/* 虛線偏移量 */
-	/* stroke-dashoffset: 760; */
+  /* 虛線 */
+  stroke-dasharray: 760;
+  /* 虛線偏移量 */
+  /* stroke-dashoffset: 760; */
 }
 
 .dots,
 .min_dot,
 .sec_dot {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
 }
 
 .dots::before {
-	content: '';
-	position: absolute;
-	width: 57px;
-	height: 57px;
-	top: -15px;
-	/* background: var(--clr); */
-	background: url(./未命名-4.png);
-	object-fit: contain;
-	background-repeat: no-repeat;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.253), 5px 5px 40px rgba(0, 0, 0, 0.3), 0 0 60px var(--clr), 0 0 80px var(--clr);
-	animation: rotate 2s linear infinite;
+  content: '';
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  top: -15px;
+  /* background: var(--clr); */
+  background: url(./未命名-4.png);
+  object-fit: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.253), 5px 5px 40px rgba(0, 0, 0, 0.3), 0 0 60px var(--clr), 0 0 80px var(--clr);
+  animation: rotate 2s linear infinite;
 }
 
 .sec_dot::before {
-	content: '';
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	top: -15px;
-	/* background: var(--clr); */
-	background: url(./未命名-2.png);
-	object-fit: contain;
-	background-repeat: no-repeat;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	animation: rotate 3s linear infinite;
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -15px;
+  /* background: var(--clr); */
+  background: url(./未命名-2.png);
+  object-fit: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotate 5s linear infinite;
 }
 .min_dot::before {
-	content: '';
-	position: absolute;
-	width: 30px;
-	height: 30px;
-	top: -5px;
-	background: url(./未命名-1.png);
-	background-size: contain;
-	background-position: center center;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	animation: rotate 5s linear infinite;
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -5px;
+  background: url(./未命名-1.png);
+  background-size: contain;
+  background-position: center center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotate 6s linear infinite;
 }
 
 @keyframes rotate {
-	0% {
-		transform: rotateX(0deg);
-	}
+  0% {
+    transform: rotate(0deg);
+  }
 
-	100% {
-		transform: rotateZ(360deg);
-	}
+  100% {
+    transform: rotate(360deg);
+  }
 }
